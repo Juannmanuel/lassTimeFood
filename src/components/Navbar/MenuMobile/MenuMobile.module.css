@@ -1,0 +1,144 @@
+/*============== Contenedor Principal ==============*/
+.menu_mobile_main {
+  /* Estilos para el contenedor principal */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+}
+
+/*============== Contenedor de Contenido Móvil ==============*/
+.content_mobile {
+  /* Estilos para el contenedor de contenido móvil */
+  display: grid;
+  grid-template-rows: 1fr 0.6fr 0.4fr;
+  position: absolute;
+  width: 400%;
+  gap: 2%;
+  padding: 5% 2%;
+  height: 80vh;
+  right: 0;
+  top: 101%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+/* ============== Contenedor de Búsqueda Móvil ============== */
+.mobile_container_search {
+  /* Estilos para el contenedor de búsqueda móvil */
+  width: 100%;
+  height: 100%;
+}
+
+/*============== Contenedor de Enlaces y Categorías Móvil ==============*/
+.mobile_container_links_categories {
+  /* Estilos para el contenedor de enlaces y categorías */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/*============== Contenedor de Enlaces Móvil ==============*/
+.mobile_container_links {
+  /* Estilos para el contenedor de enlaces */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  text-align: center;
+  padding-left: 10%;
+  gap: 10%;
+}
+
+/*============== Estilo de Botones en Enlaces Móvil ==============*/
+.mobile_container_links button {
+  /* Estilos para los botones dentro del contenedor de enlaces */
+  width: 90%;
+  height: 30%;
+  background-color: transparent;
+  color: black;
+}
+
+/*============== Estilo de Anclajes en Enlaces Móvil ==============*/
+.mobile_container_links a {
+  /* Estilos para los anclajes dentro del contenedor de enlaces */
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+}
+
+/*============== Contenedor de Categorías Móvil ==============*/
+.mobile_container_categories {
+  /* Estilos para el contenedor de categorías */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  overflow-y: auto;
+  height: 80%;
+  gap: 5% 1%;
+  padding: 2% 3%;
+}
+
+/*============== Estilo de Anclajes en Categorías Móvil ==============*/
+.mobile_container_categories a {
+  /* Estilos para los anclajes dentro del contenedor de categorías */
+  color: black;
+  text-decoration: none;
+  padding: 1%;
+  background-color: rgba(191, 188, 188, 0.549);
+  border-radius: 1%;
+}
+.icon_menu {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+/*============== Media Query para Pantalla 428px ==============*/
+@media (max-width: 428px) {
+  .container_searchBar {
+    /* Estilos adicionales para la barra de búsqueda a 428px y menos */
+    width: 100%;
+    height: 12%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/*============== Media Query para Pantalla 375px ==============*/
+@media (max-width: 375px) {
+  .mobile_container_categories {
+    /* Estilos adicionales para categorías a 375px y menos */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    padding: 1%;
+    gap: 0.5%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+/*============== Media Query para Pantalla 320px ==============*/
+@media (max-width: 320px) {
+  .content_mobile {
+    /* Estilos adicionales para el contenido móvil a 320px y menos */
+    width: 40vh;
+  }
+  .mobile_container_categories {
+    /* Estilos adicionales para categorías a 320px y menos */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    padding: 1%;
+    gap: 0.5%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

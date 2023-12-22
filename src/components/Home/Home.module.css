@@ -1,0 +1,9 @@
+.home_main{
+    background-color: rgb(217, 58, 58);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding-top: 1rem;
+}

@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Sevillana&display=swap");
+
+:root {
+  --principalColor: rgb(153, 16, 16);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+h2 {
+
+
+}

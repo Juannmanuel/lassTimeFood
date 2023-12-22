@@ -1,0 +1,5 @@
+.main_app{
+    display: flex;
+    flex-flow: column nowrap;
+    height: auto;
+}

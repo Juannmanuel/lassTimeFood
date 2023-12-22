@@ -1,0 +1,46 @@
+.card_main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: transparent;
+}
+.score_food{
+    width: 25%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1% 2%;
+    background-color: transparent;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+}
+.name_food{
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(153, 16, 16);
+    font-size: 150%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 2%;
+
+}
+.name_food a {
+    text-decoration: none;
+    color: white;
+}
+.name_food h3 {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,87 @@
+.category_main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30vh auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.title_category {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.title_category h3 {
+  font-size: 5rem;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(153, 16, 16);
+  color: white;
+  width: 80%;
+  height: 20%;
+  border-radius: .5rem;
+  box-shadow: 4px 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(50vh, auto);
+  height: auto;
+  width: 100%;
+  gap: 0.3% 1%;
+  padding: 1% 2%;
+  min-height: 100vh;
+}
+.item_category {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  background-size: cover;
+}
+
+/*============== Scren 1440 =============*/
+@media (max-width: 1024px) {
+  .container_cards {
+    grid-auto-rows: minmax(40vh, auto);
+  }
+}
+/*============== Scren 950 =============*/
+@media (max-width: 950px) {
+  .container_cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(30vh, auto);
+  }
+  .title_category h3 {
+    font-size: 3rem;
+  }
+}
+
+/*============== Scren 770=============*/
+@media (max-width: 790px) {
+  .container_cards {
+    grid-auto-rows: minmax(50vh, auto);
+  }
+}
+/*============== Scren 820=============*/
+@media (max-width: 712px) {
+  .container_cards {
+    grid-auto-rows: minmax(40vh, auto);
+  }
+}
+/*============== Scren 425=============*/
+@media (max-width: 530px) {
+  .container_cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(50vh, auto);
+  }
+}
+/*============== Scren 375=============*/
+@media (max-width: 375px) {
+}
