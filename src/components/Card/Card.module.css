@@ -27,7 +27,7 @@
     min-height: 25%;
     position: absolute;
     bottom: 0;
-    background-color: rgb(153, 16, 16);
+    background-color: rgba(153, 16, 16, 0.761);
     font-size: 150%;
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +70,9 @@
 @media (max-width: 428px) {
     .score_food {
         font-size: 150%;
+    }
+    .name_food{
+        font-size: 130%;
     }
 }
 /*============== Scren 375=============*/

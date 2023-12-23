@@ -14,7 +14,12 @@ function MenuMobile() {
         {showMenu ? (
           <MdRestaurantMenu
             className={style.icon_menu}
-            style={{ fontSize: "20px" }}
+            style={{
+              fontSize: "20px",
+              border: "none",
+              backgroundColor: "transparent",
+              borderRadius: ".5rem"
+            }}
           />
         ) : (
           <RxHamburgerMenu
@@ -36,7 +41,11 @@ function MenuMobile() {
             </span>
             <div className={style.mobile_container_categories}>
               {categories?.map((item, index) => (
-                <a key={index} href={`/#${item}`} onClick={() => setShowMenu(false)}>
+                <a
+                  key={index}
+                  href={`/#${item}`}
+                  onClick={() => setShowMenu(false)}
+                >
                   {item}
                 </a>
               ))}
