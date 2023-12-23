@@ -9,6 +9,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-content: center;
+  
 }
 
 /*============== Contenedor de Contenido Móvil ==============*/
@@ -24,7 +25,7 @@
   right: 0;
   top: 101%;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  background-color: white;
+  background-image: radial-gradient(circle at 9.44% 107.92%, #ff955b 0, #ff895b 12.5%, #fd7957 25%, #f36451 37.5%, #e54848 50%, #d62541 62.5%, #ca003f 75%, #c10041 87.5%, #ba0046 100%);
 }
 
 /* ============== Contenedor de Búsqueda Móvil ============== */
@@ -63,8 +64,11 @@
   /* Estilos para los botones dentro del contenedor de enlaces */
   width: 90%;
   height: 30%;
-  background-color: transparent;
-  color: black;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(153, 16, 16);
+  font-weight: bold;
+
 }
 
 /*============== Estilo de Anclajes en Enlaces Móvil ==============*/
@@ -93,8 +97,8 @@
   color: black;
   text-decoration: none;
   padding: 1%;
-  background-color: rgba(191, 188, 188, 0.549);
-  border-radius: 1%;
+  background-color: rgba(242, 242, 242, 0.643);
+  border-radius: .3rem;
 }
 .icon_menu {
   width: 100%;

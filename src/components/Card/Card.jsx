@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 import { IoMdStar } from "react-icons/io";
 
-function Card({ strMeal, idMeal }) {
+function Card({ strMeal, idMeal, strMealThumb }) {
   return (
-    <section className={style.card_main}>
-      <div className={style.score_food}><span><IoMdStar /></span>5.0</div>
+    <section className={style.card_main} style={{backgroundImage: `url(${strMealThumb})`}}>
+      <div className={style.score_food}><span><IoMdStar />5.0</span>
+      </div>
       <div className={style.name_food}>
         <Link to={`/detail/${idMeal}`}>
           <h3>{strMeal}</h3>

@@ -27,13 +27,11 @@ function Categories({ category }) {
       <section className={style.item_up}>
         <div
           className={style.item}
-          style={{
-            backgroundImage: `url(${foodForThisCategory[0]?.strMealThumb})`,
-          }}
         >
           <Card
             strMeal={foodForThisCategory[0]?.strMeal}
             idMeal={foodForThisCategory[0]?.idMeal}
+            strMealThumb={foodForThisCategory[0]?.strMealThumb}
           />
         </div>
         <div className={style.item_description}>

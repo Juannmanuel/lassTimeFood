@@ -1,9 +1,20 @@
-.home_main{
-    background-color: rgb(217, 58, 58);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    padding-top: 1rem;
+.home_main {
+  background-image: radial-gradient(
+    circle at 9.44% 107.92%,
+    #ff955b 0,
+    #ff895b 12.5%,
+    #fd7957 25%,
+    #f36451 37.5%,
+    #e54848 50%,
+    #d62541 62.5%,
+    #ca003f 75%,
+    #c10041 87.5%,
+    #ba0046 100%
+  );
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
 }
