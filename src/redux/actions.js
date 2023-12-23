@@ -3,6 +3,7 @@ import axios from "axios"
 export const RESULTSEARCH = "RESULTSEARCH"
 export const CATEGORIES = "CATEGORIES"
 export const FOODBYCATEGORY = "FOODBYCATEGORY"
+export const DETAILFOOD = "DETAILFOOD"
 
 export function SearchFood(params) {
     return async (dispatch) => {
@@ -37,6 +38,18 @@ export function getFoodByCategorie(categories) {
             } catch (error) {
                 console.error(`error in getAllFoodByCategories for ${category} : ${error.message}`)
             }
+        }
+    }
+}
+export function getDetailFood(id){
+    return async (dispatch) => {
+        try {
+            const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+            let data = response.data.meals
+            console.log(data, "data");
+            dispatch({type: DETAILFOOD, payload: data})
+        } catch (error) {
+            console.error(`error in getDetailFood for id ${id} : ${error.message}`)
         }
     }
 }

@@ -10,13 +10,13 @@ function Navbar() {
       <div className={style.container_logo}>logo</div>
       <div className={style.container_links}>
         <div className={style.dropdown}>
-          <button className={style.dropbtn}>Categories</button>
+          <button id="title_nav" className={style.dropbtn}>CATEGORIES</button>
           <div className={style.dropdown_content}>
           {categories.map((item, index) => <a key={index} href={`/category/${item}`}>{item}</a>)}
           </div>
         </div>
-        <button><a href="/">Home</a></button>
-        <button><a href="#">About</a></button>
+        <button id="title_nav"><a href="/">HOME</a></button>
+        <button id="title_nav"><a href="https://juan-manuel.vercel.app/" target="_blank">ABOUT</a></button>
       </div>
       <div className={style.container_search}><SearchBar/></div>
       <div className={style.menu_mobile}><MenuMobile/></div>
