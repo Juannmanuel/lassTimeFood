@@ -38,12 +38,12 @@
 /*============== Scren 530=============*/
 @media (max-width: 530px) {
   .steps_main {
-    grid-auto-rows: minmax(30vh, auto);
+    grid-auto-rows: minmax(50vh, auto);
     background-color: rgb(245, 243, 243);
   }
   .item_step {
     min-height: 0;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 5vh 45vh;
     grid-template-columns: 1fr;
   }
   .number_stap {
@@ -53,11 +53,13 @@
     text-align: center;
     border-radius: 0;
     width: 80%;
+    height: 100%;
     margin-left: 10%;
   }
   .number_stap span {
     padding: 2%;
     width: 100%;
+    height: 100%;
     font-size: 1.5rem;
 
     border-radius: 0;
