@@ -34,20 +34,44 @@ export function getFoodByCategorie(categories) {
                 const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
                 let data = response.data.meals
                 console.log(data, "data", category);
-                dispatch({ type: FOODBYCATEGORY, payload: {category, data }})
+                dispatch({ type: FOODBYCATEGORY, payload: { category, data } })
             } catch (error) {
                 console.error(`error in getAllFoodByCategories for ${category} : ${error.message}`)
             }
         }
     }
 }
-export function getDetailFood(id){
+export function getDetailFood(id) {
     return async (dispatch) => {
         try {
-            const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-            let data = response.data.meals
-            console.log(data, "data");
-            dispatch({type: DETAILFOOD, payload: data})
+            const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
+            const data = response.data.meals[0];
+
+            // Organizar ingredientes y cantidades en arrays separados
+            const ingredients = [];
+            const quantities = [];
+            for (let i = 1; i <= 20; i++) {
+                const ingredient = data[`strIngredient${i}`];
+                const measure = data[`strMeasure${i}`];
+                if (ingredient && measure) {
+                    ingredients.push(ingredient);
+                    quantities.push(measure);
+                }
+            }
+
+            // Organizar instrucciones en un array de pasos
+            const instructions = data.strInstructions.split('\r\n');
+            const steps = instructions.filter(instruction => instruction.trim() !== '');
+
+            dispatch({
+                type: DETAILFOOD,
+                payload: {
+                    ...data,
+                    ingredients,
+                    quantities,
+                    steps,
+                },
+            });
         } catch (error) {
             console.error(`error in getDetailFood for id ${id} : ${error.message}`)
         }

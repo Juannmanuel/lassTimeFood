@@ -19,7 +19,7 @@ const globalState = {
         Goat: [],
     },
     categories_datail: [],
-    detailFood: []
+    detailFood: {}
 }
 
 export default function rootReducer(state = globalState, action) {
