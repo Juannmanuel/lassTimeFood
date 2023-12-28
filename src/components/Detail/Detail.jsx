@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getDetailFood } from "../../redux/actions";
 import Card from "../Card/Card";
 import Steps from "./Steps/Steps";
+import Table from "./Table/Table";
 
 function Detail() {
   const dispatch = useDispatch();
@@ -28,8 +29,10 @@ function Detail() {
         </div>
 
         <div className={style.containerDescription}>
-          <div className={style.container_card_detail}></div>
-          <div className={style.container_tablet_detail}></div>
+          {/* <div className={style.container_card_detail}></div> */}
+          <div className={style.container_tablet_detail}>
+            <Table ingredients={detailFood.ingredients} quantity={detailFood.quantities}/>
+          </div>
         </div>
       </section>
       <Steps />

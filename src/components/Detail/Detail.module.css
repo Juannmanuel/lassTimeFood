@@ -1,11 +1,10 @@
 .detail_main {
-  margin-top: 7vh;
+  margin-top: 8vh;
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 80vh auto 80vh;
-  border: 1px solid black;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -13,7 +12,6 @@
 .header_detail {
   width: 100%;
   height: 100%;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -21,18 +19,22 @@
   width: 100%;
   height: 100%;
   padding: 2%;
+  background-color: rgb(245, 243, 243);
+
+
 }
 .containerDescription {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   gap: 1%;
   padding: 1% 2%;
+  background-color: rgb(245, 243, 243);
+
 }
-.container_card_detail {
-  border: 1px solid black;
-}
+
 .container_tablet_detail {
-  border: 1px solid black;
+  overflow: scroll;
 }
 /*Contenedro de los pasos a seguir*/
 .content_detail {
@@ -47,6 +49,11 @@
   height: 100%;
   border: 5px solid black;
 }
+.container_card{
+  background-color: rgb(245, 243, 243);
+
+}
+
 
 /*============== Scren 960=============*/
 @media (max-width: 960px) {
@@ -59,10 +66,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  .containerDescription {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
+ 
   .container_card {
     padding: 2% 3%;
   }
@@ -72,16 +76,13 @@
   .detail_main {
     padding-left: 0;
     padding-right: 0;
-    grid-template-rows: 120vh auto 80vh;
+    grid-template-rows: auto auto 80vh;
   }
   .header_detail {
     grid-template-columns: 1fr;
     grid-template-rows: 1.5fr 1fr;
   }
-  .containerDescription {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
+
 }
 /*============== Scren 768=============*/
 @media (max-width: 768px) {
@@ -96,10 +97,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 50vh 100vh;
   }
-  .containerDescription {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
+
 }
 /*============== Scren 375=============*/
 @media (max-width: 375px) {
