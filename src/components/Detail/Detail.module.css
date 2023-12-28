@@ -4,14 +4,15 @@
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 80vh auto 80vh;
+  grid-template-rows: auto auto 80vh;
   padding-left: 5%;
   padding-right: 5%;
 }
 /*Contenedor de la imagen y los detalles generales*/
 .header_detail {
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }

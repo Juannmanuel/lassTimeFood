@@ -11,6 +11,11 @@ function Detail() {
   const dispatch = useDispatch();
   const detailFood = useSelector((state) => state.detailFood);
   console.log(detailFood, "detailFood");
+  console.log(detailFood.strYoutube, "detailFood");
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  },[])
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -29,14 +34,18 @@ function Detail() {
         </div>
 
         <div className={style.containerDescription}>
-          {/* <div className={style.container_card_detail}></div> */}
           <div className={style.container_tablet_detail}>
-            <Table ingredients={detailFood.ingredients} quantity={detailFood.quantities}/>
+            <Table
+              ingredients={detailFood.ingredients}
+              quantity={detailFood.quantities}
+            />
           </div>
         </div>
       </section>
       <Steps />
-      <section className={style.links_detail}></section>
+      <section className={style.links_detail}>
+
+      </section>
     </section>
   );
 }
