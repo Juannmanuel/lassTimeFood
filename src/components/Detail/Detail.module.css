@@ -29,12 +29,14 @@
   grid-template-rows: 1fr;
   gap: 1%;
   padding: 1% 2%;
-  background-color: rgb(245, 243, 243);
+  background-color: rgb(185, 23, 23);
+  height: auto;
+  object-fit: contain;
 
 }
 
 .container_tablet_detail {
-  overflow: scroll;
+  height: auto;
 }
 /*Contenedro de los pasos a seguir*/
 .content_detail {
@@ -96,6 +98,11 @@
   .header_detail {
     grid-template-columns: 1fr;
     grid-template-rows: 50vh 100vh;
+  }
+  .containerDescription{
+    height: 80vh;
+    margin: 0;
+    padding: 0;
   }
 
 }
