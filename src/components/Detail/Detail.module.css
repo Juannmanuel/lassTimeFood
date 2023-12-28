@@ -63,7 +63,7 @@
   .detail_main {
     padding-left: 0;
     padding-right: 0;
-    grid-template-rows: 100vh auto 80vh;
+    grid-template-rows: auto auto 80vh;
   }
   .header_detail {
     grid-template-columns: 1fr;
