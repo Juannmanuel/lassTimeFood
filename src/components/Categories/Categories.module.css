@@ -64,6 +64,8 @@
 @media (max-width: 820px) {
   .categories_main {
     height: 80vh;
+    width: 95%;
+    gap: 1%;
   }
   .item_down {
     padding: 3% 2%;

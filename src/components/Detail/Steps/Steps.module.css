@@ -38,18 +38,20 @@
 /*============== Scren 530=============*/
 @media (max-width: 530px) {
   .steps_main {
-    grid-auto-rows: minmax(50vh, auto);
+    grid-auto-rows: minmax(70vh, auto);
     background-color: rgb(245, 243, 243);
+
   }
   .item_step {
-    min-height: 0;
-    grid-template-rows: 5vh 45vh;
+    min-height: 50%;
+    max-height: auto;
+    grid-template-rows: 10% 90%;
     grid-template-columns: 1fr;
   }
   .number_stap {
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: end;
     text-align: center;
     border-radius: 0;
     width: 80%;
@@ -69,6 +71,9 @@
   }
   .description_stape {
     border-radius: 0.5rem;
-    padding: 2% 3%;
+    padding: 1% 2%;
+    overflow: hidden;
+    max-height: auto;
+
   }
 }

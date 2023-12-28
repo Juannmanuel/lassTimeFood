@@ -19,15 +19,20 @@ function Detail() {
   return (
     <section className={style.detail_main}>
       <section className={style.header_detail}>
-        <div className={style.containerImage}>
-          <Card strMeal={detailFood.strMeal} idMeal={detailFood.idMeal} strMealThumb={detailFood.strMealThumb}/>
+        <div className={style.container_card}>
+          <Card
+            strMeal={detailFood.strMeal}
+            idMeal={detailFood.idMeal}
+            strMealThumb={detailFood.strMealThumb}
+          />
         </div>
+
         <div className={style.containerDescription}>
           <div className={style.container_card_detail}></div>
           <div className={style.container_tablet_detail}></div>
         </div>
       </section>
-      <Steps/>
+      <Steps />
       <section className={style.links_detail}></section>
     </section>
   );

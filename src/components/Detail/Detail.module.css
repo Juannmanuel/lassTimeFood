@@ -1,103 +1,106 @@
 .detail_main {
-    margin-top: 7vh;
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80vh auto 80vh;
-    border: 1px solid black;
-    padding-left: 5%;
-    padding-right: 5%;
+  margin-top: 7vh;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80vh auto 80vh;
+  border: 1px solid black;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 /*Contenedor de la imagen y los detalles generales*/
-.header_detail{
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.header_detail {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.containerImage{
-    width: 100%;
-    height: 100%;
-    padding: 2%;
-
+.containerImage {
+  width: 100%;
+  height: 100%;
+  padding: 2%;
 }
-.containerDescription{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1%;
-    padding: 1% 2%;
+.containerDescription {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1%;
+  padding: 1% 2%;
 }
-.container_card_detail{
-    border: 1px solid black;
+.container_card_detail {
+  border: 1px solid black;
 }
-.container_tablet_detail{
-    border: 1px solid black;
+.container_tablet_detail {
+  border: 1px solid black;
 }
 /*Contenedro de los pasos a seguir*/
-.content_detail{
-    width: 100%;
-    height: 100%;
-    border: 5px solid black;
-    min-height: 50vh;
+.content_detail {
+  width: 100%;
+  height: 100%;
+  border: 5px solid black;
+  min-height: 50vh;
 }
 /*Contenedor de los links de la publicacion*/
-.links_detail{
-    width: 100%;
-    height: 100%;
-    border: 5px solid black
+.links_detail {
+  width: 100%;
+  height: 100%;
+  border: 5px solid black;
 }
+
 /*============== Scren 960=============*/
 @media (max-width: 960px) {
-    .detail_main{
-        padding-left: 0;
-        padding-right: 0;
-        grid-template-rows: 100vh auto 80vh;
-    }
-    .header_detail{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-
-    }
-    .containerDescription{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
+  .detail_main {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-rows: 100vh auto 80vh;
+  }
+  .header_detail {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .containerDescription {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .container_card {
+    padding: 2% 3%;
+  }
 }
 /*============== Scren 820=============*/
 @media (max-width: 820px) {
-    .detail_main{
-        padding-left: 0;
-        padding-right: 0;
-        grid-template-rows: 120vh auto 80vh;
-    }
-    .header_detail{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1.5fr 1fr;
-
-    }
-    .containerDescription{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
+  .detail_main {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-rows: 120vh auto 80vh;
+  }
+  .header_detail {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr;
+  }
+  .containerDescription {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 /*============== Scren 768=============*/
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+}
 /*============== Scren 425=============*/
 @media (max-width: 428px) {
-    .detail_main{
+  .detail_main {
     grid-template-rows: 150vh auto 80vh;
     padding: 0;
-}
-    .header_detail{
-        grid-template-columns: 1fr;
-        grid-template-rows: 50vh 100vh;
-    }  
-    .containerDescription{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    } 
+  }
+  .header_detail {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 100vh;
+  }
+  .containerDescription {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 /*============== Scren 375=============*/
-@media (max-width: 375px) {}
+@media (max-width: 375px) {
+}

@@ -80,7 +80,7 @@
 @media (max-width: 768px) {
   .description_main {
     display: grid;
-    grid-template-rows: 0.25fr 0.5fr 0.25fr;
+    grid-template-rows: 0.25fr 1fr 0.25fr;
     grid-template-columns: 1fr;
   }
   .description_text {
@@ -88,7 +88,7 @@
     max-height: 25rem;
   }
   .button_category button{
-    height: 30%;
+    height: 50%;
     width: 60%;
     margin-left: 20%;
   }
