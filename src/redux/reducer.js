@@ -1,4 +1,4 @@
-import { CATEGORIES, DETAILFOOD, FOODBYCATEGORY, RESULTSEARCH } from "./actions";
+import { CATEGORIES, DETAILFOOD, FOODBYCATEGORY, RANDOMDISHES, RESULTSEARCH } from "./actions";
 
 const globalState = {
     search: [],
@@ -19,7 +19,8 @@ const globalState = {
         Goat: [],
     },
     categories_datail: [],
-    detailFood: {}
+    detailFood: {},
+    randomFood: []
 }
 
 export default function rootReducer(state = globalState, action) {
@@ -48,7 +49,12 @@ export default function rootReducer(state = globalState, action) {
         return {
             ...state,
             detailFood: action.payload
-        }    
+        }
+        case RANDOMDISHES:
+            return {
+                ...state,
+                randomFood: action.payload
+            }    
         default: return { ...state }
     }
 }

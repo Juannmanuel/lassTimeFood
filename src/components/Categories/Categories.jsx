@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import style from "./Categories.module.css";
 import Description from "./Description/Description";
 import Card from "../Card/Card";
+import Loader from "../Loader/Loader"
 import { Link } from "react-router-dom";
 
 function Categories({ category }) {
@@ -9,8 +10,7 @@ function Categories({ category }) {
   let categorieDetail = useSelector((state) =>
     state.categories_datail.filter((item) => item.strCategory == category)
   );
-  console.log(categorieDetail, "category");
-  console.log(categorieDetail);
+
   const foodForThisCategory = allfood[category]?.slice(0, 4);
   // Objeto de los platos
   // idMeal:id del plato,
@@ -21,9 +21,10 @@ function Categories({ category }) {
   // strCategory:nombre de la categoria
   // strCategoryDescription:descripciond e la categoria
   // strCategoryThumb:imgen de la categoria
-  console.log(foodForThisCategory);
+
   return (
     <section id={`${category}`} className={style.categories_main}>
+      {foodForThisCategory.length < 4 ? <Loader/> : <>
       <section className={style.item_up}>
         <div
           className={style.item}
@@ -68,6 +69,8 @@ function Categories({ category }) {
           ></div>
         </Link>
       </section>
+    </> }
+      
     </section>
   );
 }

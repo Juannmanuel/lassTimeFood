@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 function SearchBar() {
   const resultSearch = useSelector((state) => state.search);
-  console.log(resultSearch, "results");
   const dispatch = useDispatch();
   const [isSearching, setIsSearching] = useState(false);
 

@@ -9,9 +9,8 @@ import { getFoodByCategorie } from "../../redux/actions";
 function Category() {
   const { id } = useParams();
   const dispatch = useDispatch()
-  console.log(id);
   const food = useSelector((state) => state.foodByCategory[id]);
-  console.log(food);
+
   useEffect(()=>{
     window.scrollTo(0, 0)
     dispatch(getFoodByCategorie([id]))

@@ -4,6 +4,7 @@ export const RESULTSEARCH = "RESULTSEARCH"
 export const CATEGORIES = "CATEGORIES"
 export const FOODBYCATEGORY = "FOODBYCATEGORY"
 export const DETAILFOOD = "DETAILFOOD"
+export const RANDOMDISHES = "RANDOMDISHES"
 
 export function SearchFood(params) {
     return async (dispatch) => {
@@ -33,7 +34,6 @@ export function getFoodByCategorie(categories) {
             try {
                 const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
                 let data = response.data.meals
-                console.log(data, "data", category);
                 dispatch({ type: FOODBYCATEGORY, payload: { category, data } })
             } catch (error) {
                 console.error(`error in getAllFoodByCategories for ${category} : ${error.message}`)
@@ -75,5 +75,26 @@ export function getDetailFood(id) {
         } catch (error) {
             console.error(`error in getDetailFood for id ${id} : ${error.message}`)
         }
+    }
+}
+export  function clearSelectedfood() {
+    return async (dispatch) => {
+        dispatch({ type: DETAILFOOD, payload: {} })
+    }
+}
+export  function getRandomDishes() {
+    return async (dispatch) => {
+        try {
+            let randomDishes = [];
+            for (let i = 0; i <= 10; i++) {
+                const { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/random.php`)
+                randomDishes.push(data.meals[0])
+            }
+            dispatch({ type: RANDOMDISHES, payload: randomDishes })
+        } catch (error) {
+            console.error(`error in getRandomDishes: ${error.message}`)
+        }
+
+
     }
 }

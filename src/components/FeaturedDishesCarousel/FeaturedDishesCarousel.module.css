@@ -1,0 +1,6 @@
+.featured_dishes_main{
+    width: 100%;
+    height: 80vh;
+    min-height: 20vh;
+    border: 1px solid black;
+}

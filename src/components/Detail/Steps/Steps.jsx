@@ -2,7 +2,6 @@ import style from "./Steps.module.css";
 import { useSelector } from "react-redux";
 function Steps() {
   const detailFood = useSelector((state) => state.detailFood);
-  console.log(detailFood, "detailFood");
 
   return (
     <section className={style.steps_main}>
