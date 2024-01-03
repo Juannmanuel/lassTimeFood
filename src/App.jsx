@@ -5,10 +5,12 @@ import Header from "./components/Header/Header";
 import Category from "./components/Category/Category";
 import Home from "./components/Home/Home";
 import Detail from "./components/Detail/Detail";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
   const location = useLocation()
+  console.log(location.pathname.includes("category"));
 
 
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path="/category/:id" element={<Category />} />
         <Route path="/detail/:id" element={<Detail />} />
       </Routes>
+     {location.pathname.includes("category") ? null : <Footer/>}
     </div>
   );
 }

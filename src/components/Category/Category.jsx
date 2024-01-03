@@ -9,7 +9,8 @@ import { getFoodByCategorie } from "../../redux/actions";
 function Category() {
   const { id } = useParams();
   const dispatch = useDispatch()
-  const food = useSelector((state) => state.foodByCategory[id]);
+  let food = useSelector((state) => state.foodByCategory[id]);
+
 
   useEffect(()=>{
     window.scrollTo(0, 0)
@@ -29,6 +30,7 @@ function Category() {
             <div
               className={style.item_category}
               style={{ backgroundImage: `url(${item.strMealThumb})` }}
+              key={item.idMeal}
             >
               <Card strMeal={item.strMeal} idMeal={item.idMeal} />
             </div>
