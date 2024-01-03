@@ -86,7 +86,7 @@ export  function getRandomDishes() {
     return async (dispatch) => {
         try {
             let randomDishes = [];
-            for (let i = 0; i <= 10; i++) {
+            for (let i = 0; i < 20; i++) {
                 const { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/random.php`)
                 randomDishes.push(data.meals[0])
             }

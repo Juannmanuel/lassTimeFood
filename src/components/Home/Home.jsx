@@ -7,6 +7,7 @@ import FeaturedDishesCarousel from "../FeaturedDishesCarousel/FeaturedDishesCaro
 function Home() {
   const categories = useSelector((state) => state.categories);
   const randomFood = useSelector((state) => state.randomFood)
+  console.log(randomFood, "home");
 
   const food = useSelector((state) => state.foodByCategory);
   const dispatch = useDispatch();
@@ -21,15 +22,15 @@ function Home() {
       {categories.slice(0, 2).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
-      <FeaturedDishesCarousel />
+      <FeaturedDishesCarousel foodRamdon={randomFood.slice(0,10)} />
       {categories.slice(3, 5).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
-      <FeaturedDishesCarousel />
+
       {categories.slice(6, 8).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
-      <FeaturedDishesCarousel />
+      <FeaturedDishesCarousel foodRamdon={randomFood.slice(10,20)}  />
       {categories.slice(9, 12).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
