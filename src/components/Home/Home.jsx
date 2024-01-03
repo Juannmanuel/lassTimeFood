@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getFoodByCategorie, getAllCategiries, getRandomDishes } from "../../redux/actions";
 import FeaturedDishesCarousel from "../FeaturedDishesCarousel/FeaturedDishesCarousel";
+import About from "../About/About";
 function Home() {
   const categories = useSelector((state) => state.categories);
   const randomFood = useSelector((state) => state.randomFood)
@@ -26,7 +27,7 @@ function Home() {
       {categories.slice(3, 5).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
-
+      <About/>
       {categories.slice(6, 8).map((item, index) => (
         <Categories key={index} category={item} />
       ))}

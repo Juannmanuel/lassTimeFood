@@ -3,12 +3,27 @@
   height: 100vh;
   position: relative;
 }
-
+.container_video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 .header_main video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  position: absolute;
+
+}
+.welcome_header{
+  width: 60%;
+  height: 90%;
+  border: 1px solid black;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
 }
 
 
@@ -16,7 +31,10 @@
 @media (max-width: 1024px) {}
 /*============== Scren 770=============*/
 @media (max-width: 768px) {
+  .welcome_header{
+    width: 90%;
 
+  }
 }
 /*============== Scren 425=============*/
 @media (max-width: 428px) {

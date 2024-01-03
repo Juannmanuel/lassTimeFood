@@ -23,6 +23,29 @@
   text-align: center;
   background-color: rgb(240, 237, 237);
   border-radius: 0.5rem;
+  background-image: url("../../assets/images/fondocarrusel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.title_dishes h2 {
+  width: auto;
+  height: 50%;
+  font-size: 2.5rem;
+  letter-spacing: .2rem;
+  text-shadow: 0 0 10px black;
+  color: white;
+}
+.title_dishes h3 {
+  width: auto;
+  height: 50%;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  text-shadow: 0 0 10px black;
+  color: white;
+
 }
 
 
@@ -33,5 +56,51 @@
   .title_dishes h2 {
     margin: 0;
     padding: 0;
+  }
+  .title_dishes h2 {
+    font-size: 1.5rem;
+  }
+  .title_dishes h3 {
+    font-size: 1.2rem;
+  
+  }
+}
+@media (max-width: 1024px) {
+  .title_dishes h2 {
+    font-size: 2rem;
+  }
+  .title_dishes h3 {
+    font-size: 1.8rem;
+  
+  }
+}
+/*============== Scren 770=============*/
+@media (max-width: 768px) {
+  .title_dishes h2 {
+    font-size: 1.8rem;
+  }
+  .title_dishes h3 {
+    font-size: 1.5rem;
+  
+  }
+}
+/*============== Scren 425=============*/
+@media (max-width: 425px) {
+  .title_dishes h2 {
+    font-size: 1.2rem;
+  }
+  .title_dishes h3 {
+    font-size: 1rem;
+  
+  }
+}
+/*============== Scren 375=============*/
+@media (max-width: 320px) {
+  .title_dishes h2 {
+    font-size: 1rem;
+  }
+  .title_dishes h3 {
+    font-size: .8rem;
+  
   }
 }
