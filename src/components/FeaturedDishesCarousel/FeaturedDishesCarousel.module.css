@@ -3,4 +3,9 @@
     height: 80vh;
     min-height: 20vh;
     border: 1px solid black;
+
+}
+.featured_dishes_main img {
+    object-fit: cover;
+
 }
