@@ -10,21 +10,15 @@ function MenuMobile() {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div className={style.menu_mobile_main}>
-      <button onClick={() => setShowMenu(!showMenu)}>
+      <button onClick={() => setShowMenu(!showMenu)} className={style.icon_menu}>
         {showMenu ? (
           <MdRestaurantMenu
             className={style.icon_menu}
-            style={{
-              fontSize: "20px",
-              border: "none",
-              backgroundColor: "transparent",
-              borderRadius: ".5rem"
-            }}
           />
         ) : (
           <RxHamburgerMenu
             className={style.icon_menu}
-            style={{ fontSize: "20px", backgroundColor: "back" }}
+
           />
         )}
       </button>
