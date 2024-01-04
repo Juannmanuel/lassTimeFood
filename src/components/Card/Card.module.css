@@ -21,6 +21,13 @@
     font-weight: bold;
     color: green;
 }
+.score_food span {
+    background-color: rgba(255, 255, 255, 0.647);
+    padding: 4% 5%;
+    border-radius: .3rem;
+    backdrop-filter: blur(50px);
+
+}
 .name_food{
     width: 100%;
     height: auto;
@@ -49,7 +56,13 @@
     margin: 0;
     padding: 0;
 }
-
+.container_favorite{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+}
 
 /*============== Scren 1440 =============*/
 @media (max-width: 1440px) {}
