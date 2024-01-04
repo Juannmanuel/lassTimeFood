@@ -8,15 +8,15 @@ import { useSelector } from "react-redux";
 import Card from "../Card/Card";
 import Loader from "../Loader/Loader";
 
-const FeaturedDishesCarousel = ({ foodRamdon }) => {
+const FeaturedDishesCarousel = ({ foodRamdon, title, subTitle }) => {
   console.log(foodRamdon, "foodRamdon");
 
   return (
     <section className={style.featured_dishes_main}>
       <div className={style.title_dishes}>
-        <h2>Get Inspired by Our Featured Dishes</h2>
+        <h2>{title}</h2>
         <h3>
-          Discover the creativity and excellence in each dish from our kitchen.
+          {subTitle}
         </h3>
       </div>
       {foodRamdon?.length === 10 ? (

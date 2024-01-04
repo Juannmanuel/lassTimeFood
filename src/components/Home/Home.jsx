@@ -23,7 +23,7 @@ function Home() {
       {categories.slice(0, 2).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
-      <FeaturedDishesCarousel foodRamdon={randomFood.slice(0,10)} />
+      <FeaturedDishesCarousel foodRamdon={randomFood.slice(0,10)} title={"Gourmet Discovery"} subTitle={"Explore exceptional dishes crafted to delight your senses."} />
       {categories.slice(3, 5).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
@@ -31,7 +31,7 @@ function Home() {
       {categories.slice(6, 8).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
-      <FeaturedDishesCarousel foodRamdon={randomFood.slice(10,20)}  />
+      <FeaturedDishesCarousel foodRamdon={randomFood.slice(10,20)} title={"Global Flavors"} subTitle={"Journey through diverse cuisines with our inspired dishes."} />
       {categories.slice(9, 12).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
