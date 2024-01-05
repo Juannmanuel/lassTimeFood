@@ -184,3 +184,12 @@
     height: 80%;
   }
 }
+/*============== Scren 320=============*/
+@media (max-width: 320px) {
+  .login_header p {
+    font-size: .7rem;
+  }
+  .btn_login button {
+    height: 80%;
+  }
+}
