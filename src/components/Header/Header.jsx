@@ -44,7 +44,9 @@ function Header() {
         <div className={style.login_header}>
           <section>
             <p>
-              Log in or sign up to enjoy all the features of our culinary community. Share your creations, connect with other kitchen enthusiasts, leave reviews on others' dishes, and bookmark your favorite recipes. Join us and take your culinary experience to the next level.
+              Sign up to unlock our culinary community. Share creations, connect
+              with enthusiasts, review dishes, and bookmark favorites. Elevate
+              your culinary experience with us.{" "}
             </p>
           </section>
           <div className={style.btn_login}>
