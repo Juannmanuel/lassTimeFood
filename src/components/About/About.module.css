@@ -1,14 +1,110 @@
 .about_main{
     width: 90%;
-    height: 90vh;
+    height: 70vh;
     background-color: rgb(246, 246, 246);
     border-radius: .5rem;
     text-align: center;
-    padding: 30% 10%;
+    background-image: radial-gradient(circle at 50% 50%, #f9761d 0, #f6621e 16.67%, #ee471c 33.33%, #e11818 50%, #d30017 66.67%, #c8001a 83.33%, #c00020 100%);
+    display: grid;
+    grid-template-rows: 50% 30% 20%;
+}
+.container_image{
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    
+}
+.container_image img {
+    border-radius: 70%;
+    border: 5px solid white;
+    object-fit: cover;
+
+}
+.container_slogan{
+    width: 100%;
+    height: 100%;
+    padding: 1% 3%;
+    font-size: 2.5rem;
+}
+.container_slogan p {
+    margin: 0;
+    padding: 0;
+}
+.container_redes{
+    width: 100%;
+    height: 100%;
+}
+.underline{
+    text-decoration: underline;
+}
+/*============== Scren 1280=============*/
+@media (max-width: 1280px) {
+    .container_slogan{
+        font-size: 3rem;
+    }
+    .about_main{
+        height: 90vh;
+    }
+}
+/*============== Scren 1024=============*/
+@media (max-width: 1024px) {
+    .about_main{
+        height: 120vh;
+    }
+    .container_slogan{
+        font-size: 2.8rem;
+    }
+}
+/*============== Scren 960=============*/
+@media (max-width: 960px) {
+
+    .about_main{
+        height: 60vh;
+    }
+}
+/*============== Scren 900=============*/
+@media (max-width: 900px) {
+    .container_slogan{
+        font-size: 3rem;
+    }
+    .about_main{
+        height: 50vh;
+    }
 }
 /*============== Scren 820=============*/
 @media (max-width: 820px) {
     .about_main{
         width: 95%;
+        height: 60vh;
+    }
+    .container_slogan{
+        font-size: 2.6rem;
+    }
+}
+/*============== Scren 768=============*/
+@media (max-width: 768px) {
+    .about_main{
+        height: 80vh;
+    }
+    .container_slogan{
+        font-size: 2.5rem;
+    }
+}
+/*============== Scren 428=============*/
+@media (max-width: 428px) {
+
+    .container_slogan{
+        padding: 2%;
+        font-size: 2rem;
+    }
+}
+/*============== Scren 384=============*/
+@media (max-width: 384px) {
+    .about_main{
+        height: 90vh;
+    }
+    .container_slogan{
+        padding: 2%;
+        font-size: 1.8rem;
     }
 }
