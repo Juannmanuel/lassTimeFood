@@ -7,6 +7,9 @@
     background-image: radial-gradient(circle at 50% 50%, #f9761d 0, #f6621e 16.67%, #ee471c 33.33%, #e11818 50%, #d30017 66.67%, #c8001a 83.33%, #c00020 100%);
     display: grid;
     grid-template-rows: 50% 30% 20%;
+    border: 1px solid white;
+  box-shadow: 4px 5px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 .container_image{
     width: 100%;
@@ -16,7 +19,7 @@
 }
 .container_image img {
     border-radius: 70%;
-    border: 5px solid white;
+    border: 3px solid white;
     object-fit: cover;
 
 }
