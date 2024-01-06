@@ -1,5 +1,7 @@
 import style from "./About.module.css";
-
+import { FaGithub, FaLinkedin  } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
+import { Link } from "react-router-dom";
 function About() {
   return (
     <div className={style.about_main}>
@@ -18,7 +20,11 @@ function About() {
           .
         </span>
       </section>
-      <footer className={style.container_redes}>redes</footer>
+      <footer className={style.container_redes}>
+        <Link  target="_blank" to="https://github.com/Juannmanuel" title="GitHub"><FaGithub className={style.icon_redes}/></Link>
+        <Link  target="_blank" to="https://www.linkedin.com/in/juan-manuel-/" title="Linkedin"><FaLinkedin className={style.icon_redes}/></Link>
+        <Link target="_blank" to="https://juan-manuel.vercel.app/" title="Personal Portfolio"><CgWebsite className={style.icon_redes}/></Link>
+      </footer>
     </div>
   );
 }

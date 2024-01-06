@@ -25,9 +25,9 @@
   display: grid;
   grid-template-rows: 20% 50% 30%;
   background-color: rgba(255, 255, 255, 0.511);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-.title_header{
+.title_header {
   width: 100%;
   height: 100%;
   display: flex;
@@ -35,23 +35,20 @@
   align-items: center;
   gap: 2%;
   background-color: rgba(153, 16, 16, 0.557);
-  border-radius: .5rem;
-
+  border-radius: 0.5rem;
 }
-.title_header  img {
+.title_header img {
   width: 150px;
-
 }
-.description_header{
+.description_header {
   width: 100%;
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: start;
-
 }
-.description_header_title{
+.description_header_title {
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
@@ -63,10 +60,10 @@
 }
 .description_header_title span {
   font-size: 1.3rem;
-  padding: 3% ;
+  padding: 3%;
 }
 
-.login_header{
+.login_header {
   width: 100%;
   height: 100%;
   display: flex;
@@ -75,7 +72,7 @@
   align-content: center;
   padding: 2% 3%;
 }
-.btn_login{
+.btn_login {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -92,13 +89,35 @@
   height: 3rem;
   font-size: 1.2rem;
   font-weight: bold;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   background-color: rgb(153, 16, 16);
   color: white;
 }
-
+/*============== Scren 1280=============*/
+@media (max-width: 1280px) {
+  .login_header p {
+    font-size: 1.5rem;
+  }
+}
 /*============== Scren 1024=============*/
 @media (max-width: 1024px) {
+  .title_header img {
+    width: 100px;
+  }
+  .login_header {
+    padding: 1%;
+  }
+  .welcome_header {
+    width: 70%;
+  }
+  .description_header_title span {
+    font-size: 1.5rem;
+    padding: 1%;
+  }
+  .login_header p {
+    font-size: 1.2rem;
+    padding: 0 1%;
+  }
 }
 /*============== Scren 950=============*/
 @media (max-width: 950px) {
@@ -107,9 +126,8 @@
     height: 80%;
     bottom: 10%;
   }
-  .title_header  img {
+  .title_header img {
     width: 160px;
-  
   }
 }
 /*============== Scren 900=============*/
@@ -122,13 +140,10 @@
   .login_header p {
     font-size: 1.5rem;
   }
- 
-
 }
 /*============== Scren 820=============*/
 @media (max-width: 820px) {
   .btn_login button {
-   
     font-weight: 500;
   }
 }
@@ -139,14 +154,12 @@
     height: 90%;
     bottom: 2%;
   }
-  .title_header  img {
+  .title_header img {
     width: 140px;
-  
   }
   .login_header p {
     font-size: 1.3rem;
   }
-
 }
 /*============== Scren 425=============*/
 @media (max-width: 428px) {
@@ -162,7 +175,6 @@
 }
 /*============== Scren 384=============*/
 @media (max-width: 384px) {
-
   .btn_login button {
     font-size: 1rem;
   }
@@ -172,9 +184,8 @@
   .description_header_title span {
     font-size: 1rem;
   }
-  .title_header  img {
+  .title_header img {
     width: 100px;
-  
   }
 }
 /*============== Scren 360=============*/
@@ -182,12 +193,10 @@
   .login_header p {
     font-size: 1rem;
   }
-
 }
 /*============== Scren 320=============*/
 @media (max-width: 320px) {
   .login_header p {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
-
 }
