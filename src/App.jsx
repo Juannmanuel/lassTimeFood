@@ -9,22 +9,20 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 
 function App() {
-
-  const location = useLocation()
+  const location = useLocation();
   console.log(location.pathname.includes("category"));
-
 
   return (
     <div className="main_app">
       <Navbar />
-      {location.pathname === "/" ? <Header /> : null }
+      {location.pathname === "/" ? <Header /> : null}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About />} />
       </Routes>
-     {location.pathname.includes("category") ? null : <Footer/>}
+      {location.pathname.includes("category") ? null : <Footer />}
     </div>
   );
 }
