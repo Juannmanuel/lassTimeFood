@@ -9,8 +9,12 @@ export const RANDOMDISHES = "RANDOMDISHES"
 export function SearchFood(params) {
     return async (dispatch) => {
         try {
+            if(params === ""){
+                dispatch({type: RESULTSEARCH, payload: {}})
+            } else {
             const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params}`)
             dispatch({ type: RESULTSEARCH, payload: response.data.meals })
+            }
         } catch (error) {
             console.error(`error SearchFood, status: ${error, error.message}`);
         }

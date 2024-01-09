@@ -16,7 +16,7 @@ function Navbar() {
           </div>
         </div>
         <button id="title_nav"><a href="/">HOME</a></button>
-        <button id="title_nav"><a href="https://juan-manuel.vercel.app/" target="_blank">ABOUT</a></button>
+        <button id="title_nav"><a href="/about">ABOUT</a></button>
       </div>
       <div className={style.container_search}><SearchBar/></div>
       <div className={style.menu_mobile}><MenuMobile/></div>

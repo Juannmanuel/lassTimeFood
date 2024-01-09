@@ -6,6 +6,7 @@ import Category from "./components/Category/Category";
 import Home from "./components/Home/Home";
 import Detail from "./components/Detail/Detail";
 import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/category/:id" element={<Category />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/about" element={<About/>} />
       </Routes>
      {location.pathname.includes("category") ? null : <Footer/>}
     </div>

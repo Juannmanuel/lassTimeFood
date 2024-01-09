@@ -52,7 +52,7 @@ function MenuMobile() {
               </a>
             </button>
             <button>
-              <a href="#">
+              <a href="/about">
                 <strong>About</strong>
               </a>
             </button>

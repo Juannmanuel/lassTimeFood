@@ -27,7 +27,6 @@ function Home() {
       {categories.slice(3, 5).map((item, index) => (
         <Categories key={index} category={item} />
       ))}
-      <About/>
       {categories.slice(6, 8).map((item, index) => (
         <Categories key={index} category={item} />
       ))}

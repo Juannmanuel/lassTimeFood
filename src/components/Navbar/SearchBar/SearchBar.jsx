@@ -8,11 +8,18 @@ function SearchBar() {
   const resultSearch = useSelector((state) => state.search);
   const dispatch = useDispatch();
   const [isSearching, setIsSearching] = useState(false);
+  const [input, setInput] = useState("")
 
   const handleChange = (event) => {
-    const searchTerm = event.target.value;
-    dispatch(SearchFood(searchTerm));
-    setIsSearching(!!searchTerm); // Actualiza el estado de búsqueda
+    setInput(event.target.value)
+    dispatch(SearchFood(event.target.value));
+    setIsSearching(!!event.target.value);
+
+  };
+  const handleSelectPlate = () => {
+    setIsSearching(false);
+    setInput("")
+    dispatch(SearchFood(""))
   };
 
   return (
@@ -22,13 +29,14 @@ function SearchBar() {
           type="text"
           placeholder="Search for your favorite food."
           onChange={handleChange}
+          value={input}
         />
       </div>
       {isSearching && resultSearch && resultSearch.length > 0 ? (
         <div className={style.content_result_search}>
           {resultSearch.map((item, index) => (
             <div key={index} className={style.result_search}>
-              <div className={style.container_image_search}>
+              <div className={style.container_image_search} onClick={handleSelectPlate}>
                 {" "}
                 <Link to={`/detail/${item.idMeal}`}>
                   <img src={item.strMealThumb} alt={item.strMeal} />{" "}
@@ -40,7 +48,7 @@ function SearchBar() {
         </div>
       ) : isSearching ? (
         <div className={style.content_result_search}>
-          No se encontraron platos.
+          Recipe not found.
         </div>
       ) : null}
     </div>
