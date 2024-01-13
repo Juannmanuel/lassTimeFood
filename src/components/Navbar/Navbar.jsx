@@ -13,11 +13,11 @@ function Navbar() {
         <div className={style.dropdown}>
           <button id="title_nav" className={style.dropbtn}>Categories</button>
           <div className={style.dropdown_content}>
-          {categories.map((item, index) => <Link key={index} href={`/category/${item}`}>{item}</Link>)}
+          {categories.map((item, index) => <Link key={index} to={`/category/${item}`}>{item}</Link>)}
           </div>
         </div>
-        <button id="title_nav"><Link href="/">Home</Link></button>
-        <button id="title_nav"><Link href="/about">About</Link></button>
+        <button id="title_nav"><Link to="/">Home</Link></button>
+        <button id="title_nav"><Link to="/about">About</Link></button>
       </div>
       <div className={style.container_search}><SearchBar/></div>
       <div className={style.menu_mobile}><MenuMobile/></div>
