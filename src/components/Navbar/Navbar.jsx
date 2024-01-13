@@ -3,7 +3,7 @@ import style from "./Navbar.module.css";
 import MenuMobile from "./MenuMobile/MenuMobile";
 import SearchBar from "./SearchBar/SearchBar";
 import logoNav from "../../assets/images/logoNav.jpeg"
-
+import { Link } from "react-router-dom";
 function Navbar() {
     const categories = useSelector((state) => state.categories)
   return (
@@ -13,11 +13,11 @@ function Navbar() {
         <div className={style.dropdown}>
           <button id="title_nav" className={style.dropbtn}>Categories</button>
           <div className={style.dropdown_content}>
-          {categories.map((item, index) => <a key={index} href={`/category/${item}`}>{item}</a>)}
+          {categories.map((item, index) => <Link key={index} href={`/category/${item}`}>{item}</Link>)}
           </div>
         </div>
-        <button id="title_nav"><a href="/">Home</a></button>
-        <button id="title_nav"><a href="/about">About</a></button>
+        <button id="title_nav"><Link href="/">Home</Link></button>
+        <button id="title_nav"><Link href="/about">About</Link></button>
       </div>
       <div className={style.container_search}><SearchBar/></div>
       <div className={style.menu_mobile}><MenuMobile/></div>
