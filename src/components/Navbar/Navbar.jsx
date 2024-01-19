@@ -8,7 +8,7 @@ function Navbar() {
     const categories = useSelector((state) => state.categories)
   return (
     <nav className={style.nav_main}>
-      <div className={style.container_logo}><img src={logoNav} alt="logo" /></div>
+      <div className={style.container_logo}><Link to={"/"}><img src={logoNav} alt="logo" /></Link></div>
       <div className={style.container_links}>
         <div className={style.dropdown}>
           <button id="title_nav" className={style.dropbtn}>Categories</button>
