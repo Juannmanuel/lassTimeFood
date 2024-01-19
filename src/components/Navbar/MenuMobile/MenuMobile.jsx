@@ -38,7 +38,7 @@ function MenuMobile() {
               {categories?.map((item, index) => (
                 <Link
                   key={index}
-                  href={`/${item}`}
+                  to={`/${item}`}
                   onClick={() => setShowMenu(false)}
                 >
                   {item}
@@ -48,12 +48,12 @@ function MenuMobile() {
           </div>
           <div className={style.mobile_container_links}>
             <button>
-              <Link href="/">
+              <Link to="/">
                 <strong>Home</strong>
               </Link>
             </button>
             <button>
-              <Link href="/about">
+              <Link to="/about">
                 <strong>About</strong>
               </Link>
             </button>
