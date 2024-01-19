@@ -4,6 +4,7 @@ import { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdRestaurantMenu } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function MenuMobile() {
   const categories = useSelector((state) => state.categories);
@@ -35,26 +36,26 @@ function MenuMobile() {
             </span>
             <div className={style.mobile_container_categories}>
               {categories?.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={`/#${item}`}
+                  href={`/${item}`}
                   onClick={() => setShowMenu(false)}
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
           <div className={style.mobile_container_links}>
             <button>
-              <a href="/">
+              <Link href="/">
                 <strong>Home</strong>
-              </a>
+              </Link>
             </button>
             <button>
-              <a href="/about">
+              <Link href="/about">
                 <strong>About</strong>
-              </a>
+              </Link>
             </button>
           </div>
         </div>
