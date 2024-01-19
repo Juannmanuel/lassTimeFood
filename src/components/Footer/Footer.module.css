@@ -4,4 +4,27 @@
     background-color: rgb(153, 16, 16);
     text-align: center;
     color: wheat;
+    padding: 3% 5%;
+}
+
+/* Definición de clases como objetos */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  color: #e2e2e3; /* o cualquier otro color gris que desees */
+  background-color: rgb(153, 16, 16);
+}
+
+.smallText {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.75rem; /* o cualquier otro tamaño de fuente que desees */
+}
+
+.infoText {
+  font-size: 0.75rem;
+}
+
+.boldText {
+  font-weight: 600; /* para negrita, ajusta según tus preferencias */
 }
