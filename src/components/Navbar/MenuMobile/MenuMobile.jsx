@@ -38,7 +38,7 @@ function MenuMobile() {
               {categories?.map((item, index) => (
                 <Link
                   key={index}
-                  to={`/${item}`}
+                  to={`/category/${item}`}
                   onClick={() => setShowMenu(false)}
                 >
                   {item}
