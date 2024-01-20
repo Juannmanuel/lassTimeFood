@@ -4,7 +4,7 @@
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 80vh;
+  grid-template-rows: auto auto 50vh;
   padding-left: 5%;
   padding-right: 5%;
   margin-bottom: 2%;
@@ -51,7 +51,6 @@
 .links_detail {
   width: 100%;
   height: auto;
-  border: 5px solid black;
 }
 .container_card{
   background-color: rgb(245, 243, 243);
@@ -64,7 +63,7 @@
   .detail_main {
     padding-left: 0;
     padding-right: 0;
-    grid-template-rows: auto auto 80vh;
+    grid-template-rows: auto auto 50vh;
   }
   .header_detail {
     grid-template-columns: 1fr;
@@ -80,7 +79,7 @@
   .detail_main {
     padding-left: 0;
     padding-right: 0;
-    grid-template-rows: auto auto 80vh;
+    grid-template-rows: auto auto 50vh;
   }
   .header_detail {
     grid-template-columns: 1fr;
