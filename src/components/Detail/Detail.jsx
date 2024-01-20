@@ -7,10 +7,12 @@ import Card from "../Card/Card";
 import Steps from "./Steps/Steps";
 import Table from "./Table/Table";
 import Loader from "../Loader/Loader";
+import ReactPlayer from "react-player";
 
 function Detail() {
   const dispatch = useDispatch();
   const detailFood = useSelector((state) => state.detailFood);
+  console.log(detailFood, "detail");
   const { id } = useParams();
   useEffect(()=>{
     window.scrollTo(0, 0)
@@ -45,7 +47,7 @@ function Detail() {
       </section>
       <Steps />
       <section className={style.links_detail}>
-
+      <ReactPlayer url={detailFood.strYoutube} width={"100%"} height={"100%"} controls={true}/>
       </section>
       </>}
      

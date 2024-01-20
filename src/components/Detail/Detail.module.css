@@ -50,7 +50,7 @@
 /*Contenedor de los links de la publicacion*/
 .links_detail {
   width: 100%;
-  height: 100%;
+  height: auto;
   border: 5px solid black;
 }
 .container_card{
