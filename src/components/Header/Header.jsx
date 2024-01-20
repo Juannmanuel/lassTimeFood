@@ -5,6 +5,7 @@ import logo from "../../assets/images/logo.png";
 import { FaCheck } from "react-icons/fa";
 import { FaUtensils } from "react-icons/fa";
 import { FiBookOpen, FiBook, FiUsers } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -50,8 +51,8 @@ function Header() {
             </p>
           </section>
           <div className={style.btn_login}>
-            <button>Login</button>
-            <button>Sign up</button>
+           <button> <Link to={"/login"} style={{textDecoration: "none", color: "white"}}>Login</Link></button>
+            <button><Link to={"/login/signIn"} style={{textDecoration: "none", color: "white"}}>Sign up</Link></button>
           </div>
         </div>
       </div>
