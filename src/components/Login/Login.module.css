@@ -1,80 +1,77 @@
-.login_main{
-    width: 100%;
-    height: 100vh;
-    margin-top: 7vh;
-    gap: 1rem;
-
+.login_main {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
 }
-.container_video{
-    width: 100%;
-    height: 100%;
-    position: relative;
+
+.container_grid {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container_video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .container_video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-}
 .container_form {
-    width: 50%;
-    height: 30%;
-    padding: 20px;
-    background-color: #ffffffc2;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    gap: 1rem;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .container_input{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10rem;
-    text-align: start;
-    width: 100%;
-    height: auto;
-    border: 1px solid black;
-  }
-  .container_formlabel input {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container_formlabel button {
-    width: 100%;
-    padding: 10px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: .3rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .container_formlabel button:hover {
-    background-color: #2980b9;
-  }
-/*============== Scren 770=============*/
-@media (max-width: 768px) {
+  display: flex;
+  width: 20rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #f4ebeb;
+  padding: 5%;
+  box-shadow: 4px 5px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: .5rem;
+}
 
+.container_input {
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-content: center;
+width: 100%;
 }
-/*============== Scren 450=============*/
-@media (max-width: 450px) {
-.container_form {
-    width: 90%;
-   
+
+label {
+  display: block;
+  margin-bottom: .5rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
 }
+
+input {
+  padding: 8%;
+  border: 1px solid black;
+  border-radius: .5rem;
+  outline: none;
+  width: 100%;
+}
+
+button {
+  padding: .5rem;
+  border: none;
+  width: 60%;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(153, 16, 16); /* Puedes ajustar el color */
+  color: #fff;
+}
+
+button:hover {
+  background-color: rgb(142, 22, 22); /* Puedes ajustar el color al hacer hover */
 }

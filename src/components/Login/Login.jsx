@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./Login.module.css";
 import video from "../../assets/vidioHeader/videoHeader.mp4";
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -17,40 +17,35 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add logic here to handle authentication, such as sending data to a server
+    // Puedes agregar lógica aquí para manejar la autenticación, como enviar datos a un servidor
     console.log("Email:", email);
     console.log("Password:", password);
   };
 
   return (
     <div className={style.login_main}>
-      <section className={style.container_video}>
-      <video muted autoPlay loop src={video} />
-      <form onSubmit={handleSubmit} className={style.container_form}>
-        <div className={style.container_input}>
-
-        <label>
-          Email
-          <input type="email" value={email} onChange={handleEmailChange} />
-        </label>
+      <section className={style.container_grid}>
+        <div className={style.container_video}>
+          <video muted autoPlay loop src={video} />
         </div>
-        <br />
-        <div className={style.container_input}>
-
-        <label>
-          Password
-          <input
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-          />
-        </label>
-        </div>
-        <br />
-        <button type="submit">Login</button>
-      </form>
+        <form onSubmit={handleSubmit} className={style.container_form}>
+          <div className={style.container_input}>
+            <label>Email</label>
+            <input type="email" value={email} onChange={handleEmailChange} />
+          </div>
+          <br />
+          <div className={style.container_input}>
+            <label>Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+          </div>
+          <br />
+          <button type="submit">Login</button>
+        </form>
       </section>
-    
     </div>
   );
 };
